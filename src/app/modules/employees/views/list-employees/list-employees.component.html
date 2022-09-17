@@ -1,1 +1,16 @@
-<p>list-employees works!</p>
+<div>
+    <row>
+        <div class="employees-search">
+            <row>
+                <column><input [formControl]="searchControl" class="employees-search-input" placeholder="Search..." type="text" /></column>
+                <column><fa-icon [icon]="faSearch"></fa-icon></column>
+            </row>
+        </div>
+    </row>
+
+    <row>
+        <column *ngFor="let employee of ListEmployees">
+            <list-employee-item [routerLink]="['/employees/employeedetail', employee.id]" [employee]="employee"></list-employee-item>
+        </column>
+    </row>
+</div>

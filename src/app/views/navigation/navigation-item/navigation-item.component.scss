@@ -1,0 +1,16 @@
+.navigation-item {
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+    font-weight: 600;
+
+    &-active{
+        color: #376BFB;
+        background-color: #E1E5FE;
+        border-radius: 4px;
+    }
+}
+
+
+

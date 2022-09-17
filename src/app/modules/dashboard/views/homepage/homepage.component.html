@@ -1,0 +1,42 @@
+<row>
+    <div class="card">
+        <div class="card-header">
+            <div class="card-header-content">
+                <div class="card-header-content-left">
+                    <fa-icon class="card-header-content-left-icon" [icon]="faChartColumn"></fa-icon>
+                    <p>Employee distribution</p>
+                </div>
+                <div class="card-header-content-right">
+                    <fa-icon class="card-header-content-right-ratateicon" [icon]="faRotateRight"></fa-icon>
+                    <fa-icon [icon]="faEllipsisVertical"></fa-icon>
+                </div>
+            </div>
+        </div>
+        <div class="card-content">
+            <object type="image/svg+xml" data="/assets/img/homeChart.svg"></object>
+        </div>
+        <div class="card-footer">
+            <a href="javascript:void(0)">Go to Reports</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <div class="card-header-content">
+                <div class="card-header-content-left">
+                    <fa-icon class="card-header-content-left-icon" [icon]="faUmbrella"></fa-icon>
+                    <p>Public holidays</p>
+                </div>
+                <div class="card-header-content-right">
+                    <fa-icon class="card-header-content-right-ratateicon" [icon]="faRotateRight"></fa-icon>
+                    <fa-icon [icon]="faEllipsisVertical"></fa-icon>
+                </div>
+            </div>
+        </div>
+        <div class="card-content">
+            <div class="card-content-holiday" *ngFor="let holiday of Holidays">
+                <div class="card-content-holiday-title">{{holiday.name}}</div>
+                <div class="card-content-holiday-date">{{holiday.date | date: 'MMM d, y'}}</div>
+            </div>
+        </div>
+    </div>
+</row>

@@ -1,0 +1,40 @@
+.employee-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 16px;
+
+    &-group {
+        width: 452px;
+        height: 296px;
+        margin-top: 56px;
+    }
+}
+
+.input-label {
+    margin: 0;
+    font-weight: 500;
+    font-size: 13px;
+    color: rgba(22, 42, 76, 0.9);
+}
+
+.input-area {
+    width: 452px;
+    height: 72px;
+    margin-bottom: 40px;
+
+    &-textinput {
+        width: 452px;
+        height: 44px;
+        background: var(--light-blue);
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        border-bottom: 1px solid rgba(22, 42, 76, 0.5);
+        margin-top: 8px;
+        border-radius: 4px 4px 0px 0px;
+        &:focus {
+            outline: none;
+        }
+    }
+}

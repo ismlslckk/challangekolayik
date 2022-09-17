@@ -1,0 +1,14 @@
+<header *ngIf="Information" class="header">
+    <div class="header-left">
+        <fa-icon class="header-arrow-icon" (click)="goBack()" *ngIf="Employee" [icon]="faArrowLeft"></fa-icon>
+        <div *ngIf="Employee" class="header-avatarContainer">
+            <employee-avatar [employee]="Employee"></employee-avatar>
+        </div>
+        <div class="header-title">
+            {{Information}}
+        </div>
+    </div>
+    <div class="header-hamburger-icon">
+        <fa-icon class="header-arrow-icon" (click)="setMobileActive()" [icon]="faHamburger"></fa-icon>
+    </div>
+</header>

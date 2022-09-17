@@ -1,0 +1,42 @@
+<div *ngIf="Employee" class="employee-detail">
+    <div class="employee-detail-group">
+        <row>
+            <div class="input-area">
+                <p class="input-label">First Name</p>
+                <input [ngModel]="Employee.firstName" class="input-area-textinput" type="text" />
+            </div>
+            <div class="input-area">
+                <p class="input-label">Email</p>
+                <input [ngModel]="Employee.email" class="input-area-textinput" type="text" />
+            </div>
+            <div class="input-area">
+                <p class="input-label">Department</p>
+                <select class="input-area-textinput" [ngModel]="Employee.departmentId">
+                    <option *ngFor="let department of Departments" [ngValue]="department.id">
+                        {{ department.name }}
+                    </option>
+                </select>
+            </div>
+        </row>
+    </div>
+    <div class="employee-detail-group">
+        <row>
+            <div class="input-area">
+                <p class="input-label">Last Name</p>
+                <input [ngModel]="Employee.lastName" class="input-area-textinput" type="text" />
+            </div>
+            <div class="input-area">
+                <p class="input-label">Start Date</p>
+                <input [value]="Employee.startDate | date: 'yyyy-MM-dd'" class="input-area-textinput" type="date" />
+            </div>
+            <div class="input-area">
+                <p class="input-label">Location</p>
+                <select class="input-area-textinput" [ngModel]="Employee.locationId">
+                    <option *ngFor="let location of Locations" [ngValue]="location.id">
+                        {{ location.name }}
+                    </option>
+                </select>
+            </div>
+        </row>
+    </div>
+</div>

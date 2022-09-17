@@ -1,0 +1,77 @@
+.card {
+    width: 360px;
+    margin: 24px 0 0 24px;
+    border: 1px solid rgba(22, 42, 76, 0.15);
+    border-radius: 4px;
+
+    &-header {
+        padding: 16px;
+
+        &-content {
+            display: flex;
+            font-weight: bold;
+            justify-content: space-between;
+
+            &-left {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                &-icon {
+                    margin-right: 10.5px;
+                    color: var(--primary);
+                }
+            }
+
+            &-right {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                color: var(--primary);
+
+                &-ratateicon {
+                    margin-right: 27px;
+                }
+            }
+        }
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 24px;
+
+        &-holiday {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 20px;
+
+            &-title {
+                margin-left: 16px;
+                width: 200px;
+                overflow: hidden; /* hide overflows */
+                white-space: nowrap; /* don't go to the bottom line */
+                text-overflow: ellipsis; /* three dots if long */
+            }
+
+            &-date {
+                margin-right: 16px;
+            }
+        }
+    }
+
+    &-footer {
+        padding: 16px;
+        display: flex;
+        justify-content: end;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+    }
+}

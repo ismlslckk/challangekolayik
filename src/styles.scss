@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/css/variables";
+
+@font-face {
+    font-family: SF Pro Text;
+    src: url(./assets/font/SFProText.ttf) format("opentype");
+  }
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+* {
+    font-family: "SF Pro Text";
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
