@@ -11,12 +11,14 @@ export class ItemnestedComponent implements OnInit {
   @Input() list;
   @Input() listHeader;
   @Input() parentTable;
+  @Input() deepth;
 
 
   constructor() { }
 
   ngOnInit() {
-   
+   if(!this.deepth)
+    this.deepth=1;
   }
 
   expand(emp:Employee){

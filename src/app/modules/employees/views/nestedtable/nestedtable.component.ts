@@ -44,7 +44,7 @@ export class NestedtableComponent implements OnInit {
     emp122.firstName='emp1_2_1';
     emp122.lastName='last1_2_1';
 
-    emp11.subItems=[emp111,emp122];
+    emp11.subItems=[emp111,emp122,emp111,emp122];
 
     emp1.subItems=[emp11,emp12];
 

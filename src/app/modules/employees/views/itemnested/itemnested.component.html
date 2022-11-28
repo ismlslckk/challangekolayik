@@ -1,4 +1,4 @@
-<table border="1" bordercolor="green">
+<table>
     <ng-container *ngIf="listHeader && parentTable" >
         <tr>
             <th *ngFor="let header of listHeader">{{header}}</th>
@@ -8,6 +8,7 @@
     <ng-container *ngFor="let item of list">
         <tr (click)="expand(item)">
             <td>
+                <span *ngIf="!item.subItems">&nbsp;&nbsp;</span>
                 <span *ngIf="item.subItems && !item.isExpand">+</span>
                 <span *ngIf="item.subItems && item.isExpand">-</span>
                 {{item.firstName}}
