@@ -1,6 +1,5 @@
 export class Employee {
   id: number
-  parent:number
   firstName: string
   lastName: string
   email: string

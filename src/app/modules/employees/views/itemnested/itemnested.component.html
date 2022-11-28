@@ -7,7 +7,11 @@
    
     <ng-container *ngFor="let item of list">
         <tr (click)="expand(item)">
-            <td>{{item.firstName}}</td>
+            <td>
+                <span *ngIf="item.subItems && !item.isExpand">+</span>
+                <span *ngIf="item.subItems && item.isExpand">-</span>
+                {{item.firstName}}
+            </td>
             <td>{{item.lastName}}</td>
         </tr>
         <tr *ngIf="item.subItems">

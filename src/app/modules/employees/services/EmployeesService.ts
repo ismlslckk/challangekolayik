@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core'
+import { faL } from '@fortawesome/free-solid-svg-icons';
 import { Observable } from 'rxjs'
 import { of } from 'rxjs';
 import { delay } from 'rxjs/internal/operators'
@@ -23,7 +24,10 @@ export class EmployeesService {
       departmentName: '',
       color: '',
       avatarName: '',
-      fullName: ''
+      fullName: '',
+      baslik:'',
+      subItems:null,
+      isExpand:false
     },
     {
       id: 243534,
@@ -38,7 +42,10 @@ export class EmployeesService {
       departmentName: '',
       color: '',
       avatarName: '',
-      fullName: ''
+      fullName: '',
+      baslik:'',
+      subItems:null,
+      isExpand:false
     },
     {
       id: 982324,
@@ -53,7 +60,10 @@ export class EmployeesService {
       departmentName: '',
       color: '',
       avatarName: '',
-      fullName: ''
+      fullName: '',
+      baslik:'',
+      subItems:null,
+      isExpand:false
     },
     {
       id: 645664,
@@ -68,7 +78,10 @@ export class EmployeesService {
       departmentName: '',
       color: '',
       avatarName: '',
-      fullName: ''
+      fullName: '',
+      baslik:'',
+      subItems:null,
+      isExpand:false
     },
     {
       id: 312398,
@@ -83,7 +96,10 @@ export class EmployeesService {
       departmentName: '',
       color: '',
       avatarName: '',
-      fullName: ''
+      fullName: '',
+      baslik:'',
+      subItems:null,
+      isExpand:false
     },
     {
       id: 945234,
@@ -98,7 +114,10 @@ export class EmployeesService {
       departmentName: '',
       color: '',
       avatarName: '',
-      fullName: ''
+      fullName: '',
+      baslik:'',
+      subItems:null,
+      isExpand:false
     },
     {
       id: 122395,
@@ -113,7 +132,10 @@ export class EmployeesService {
       departmentName: '',
       color: '',
       avatarName: '',
-      fullName: ''
+      fullName: '',
+      baslik:'',
+      subItems:null,
+      isExpand:false
     },
     {
       id: 528293,
@@ -128,7 +150,10 @@ export class EmployeesService {
       departmentName: '',
       color: '',
       avatarName: '',
-      fullName: ''
+      fullName: '',
+      baslik:'',
+      subItems:null,
+      isExpand:false
     },
     {
       id: 696432,
@@ -143,7 +168,10 @@ export class EmployeesService {
       departmentName: '',
       color: '',
       avatarName: '',
-      fullName: ''
+      fullName: '',
+      baslik:'',
+      subItems:null,
+      isExpand:false
     },
     {
       id: 595974,
@@ -158,7 +186,10 @@ export class EmployeesService {
       departmentName: '',
       color: '',
       avatarName: '',
-      fullName: ''
+      fullName: '',
+      baslik:'',
+      subItems:null,
+      isExpand:false
     },
     {
       id: 713455,
@@ -173,7 +204,10 @@ export class EmployeesService {
       departmentName: '',
       color: '',
       avatarName: '',
-      fullName: ''
+      fullName: '',
+      baslik:'',
+      subItems:null,
+      isExpand:false
     },
     {
       id: 554923,
@@ -188,7 +222,10 @@ export class EmployeesService {
       departmentName: '',
       color: '',
       avatarName: '',
-      fullName: ''
+      fullName: '',
+      baslik:'',
+      subItems:null,
+      isExpand:false
     },
   ];
 
