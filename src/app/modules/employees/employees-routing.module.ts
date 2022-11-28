@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { EmployeeDetailComponent } from './views/employee-detail/employee-detail.component';
 import { ListEmployeesComponent } from './views/list-employees/list-employees.component';
+import { NestedtableComponent } from './views/nestedtable/nestedtable.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,13 @@ const routes: Routes = [
         component: ListEmployeesComponent,
         data: {
           title: 'Employees',
+        },
+      },
+      {
+        path: 'nestedtable',
+        component: NestedtableComponent,
+        data: {
+          title: 'nestedtable',
         },
       },
       {

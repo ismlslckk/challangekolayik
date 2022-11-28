@@ -9,9 +9,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { EmployeeDetailComponent } from './views/employee-detail/employee-detail.component';
+import { NestedtableComponent } from './views/nestedtable/nestedtable.component';
+import { ItemnestedComponent } from './views/itemnested/itemnested.component';
 
 @NgModule({
-  declarations: [ListEmployeesComponent, ListEmployeeItemComponent, EmployeeDetailComponent],
+  declarations: [ListEmployeesComponent, ListEmployeeItemComponent, EmployeeDetailComponent, NestedtableComponent, ItemnestedComponent],
   imports: [
     CommonModule,
     EmployeesRoutingModule,

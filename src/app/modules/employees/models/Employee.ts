@@ -1,5 +1,6 @@
 export class Employee {
   id: number
+  parent:number
   firstName: string
   lastName: string
   email: string
@@ -12,4 +13,7 @@ export class Employee {
   color: string
   avatarName: string
   fullName: String
+  isExpand:boolean
+  baslik:string
+  subItems:Array<Employee>
 }

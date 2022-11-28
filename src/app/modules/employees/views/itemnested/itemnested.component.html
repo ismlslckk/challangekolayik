@@ -1,0 +1,19 @@
+<table border="1" bordercolor="green">
+    <ng-container *ngIf="listHeader && parentTable" >
+        <tr>
+            <th *ngFor="let header of listHeader">{{header}}</th>
+        </tr>
+    </ng-container>
+   
+    <ng-container *ngFor="let item of list">
+        <tr (click)="expand(item)">
+            <td>{{item.firstName}}</td>
+            <td>{{item.lastName}}</td>
+        </tr>
+        <tr *ngIf="item.subItems">
+            <td *ngIf="item.isExpand" [attr.colspan]="listHeader.length" >
+                <itemnested [list]="item.subItems" [listHeader]="listHeader"></itemnested>
+            </td>
+        </tr>
+    </ng-container>
+</table>
