@@ -16,7 +16,7 @@
             <td>{{item.lastName}}</td>
         </tr>
         <tr *ngIf="item.subItems">
-            <td *ngIf="item.isExpand" [attr.colspan]="listHeader.length" >
+            <td *ngIf="item.isExpand" [@changeDivSize]="item.isExpand ? 'initial' : 'final'" [attr.colspan]="listHeader.length" >
                 <itemnested [list]="item.subItems" [listHeader]="listHeader"></itemnested>
             </td>
         </tr>

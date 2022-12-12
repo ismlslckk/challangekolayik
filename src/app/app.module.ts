@@ -11,6 +11,7 @@ import { NavigationComponent } from './views/navigation/navigation.component';
 import { NavigationItemComponent } from './views/navigation/navigation-item/navigation-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppStateService } from './services/AppStateService';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { AppStateService } from './services/AppStateService';
     AppRoutingModule,
     DashboardModule,
     ComponentsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule
   ],
   providers: [AppStateService],
   bootstrap: [AppComponent]
