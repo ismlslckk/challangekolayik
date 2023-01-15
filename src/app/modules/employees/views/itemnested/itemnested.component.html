@@ -10,7 +10,7 @@
             <td 
                 class="border-bottom"
                 *ngFor="let header of listHeader; let i = index">
-                <span *ngIf="i===0 && !item.subItems">&nbsp;&nbsp;</span>
+                <span *ngIf="i===0 && !item.subItems">&nbsp;&nbsp;&nbsp;</span>
                 <span *ngIf="i===0 && item.subItems && !item.isExpand">+</span>
                 <span *ngIf="i===0 && item.subItems && item.isExpand">-</span>
                 {{item[header.columnName]}}
@@ -18,12 +18,14 @@
         </tr>
         <tr *ngIf="item.subItems">
             <td class="subtd-padding-left" *ngIf="item.isExpand" [@changeDivSize]="item.isExpand ? 'initial' : 'final'" [attr.colspan]="listHeader.length" >
-                <itemnested 
-                [list]="item.subItems"
-                [isWriteHeader]='false' 
-                [listHeader]="listHeader"
-                (rowExpandEvent)="rowExpandedEvent($event)"
-                ></itemnested>
+               <div class="subtable-div">
+                    <itemnested 
+                    [list]="item.subItems"
+                    [isWriteHeader]='false' 
+                    [listHeader]="listHeader"
+                    (rowExpandEvent)="rowExpandedEvent($event)"
+                    ></itemnested>
+               </div>
             </td>
         </tr>
     </ng-container>
