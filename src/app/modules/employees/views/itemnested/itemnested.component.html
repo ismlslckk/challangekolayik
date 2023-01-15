@@ -7,7 +7,7 @@
    
     <ng-container *ngFor="let item of list">
         <tr (click)="expand(item)">
-            <td *ngFor="let header of listHeader; let i = index"
+            <td *ngFor="let header of listHeader; let i = index;let lastItem = last;"
             class="border-bottom"
             [ngStyle]="{'padding-left': i===0 ? item.tabsize+'rem': '0'}"
             [ngClass]="{'expandable-td': i===0,'border-bottom': !item.isExpand}">
