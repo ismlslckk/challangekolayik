@@ -3,19 +3,20 @@ table{
 }
 
 th,td{
-    min-width:100px;
+    min-width:200px;
+    max-width: 200px;
     text-align: left;
+    word-break:break-all;
 }
 
-.td-content{
+td{
+    padding: 0.2rem 3rem 0.5rem 0px;
+}
+
+.border-bottom{
     border-bottom: solid 1px rgb(201, 195, 195);
 }
 
-
-
-.left-stuff {
-    height: 50px;
-    border: 1px solid black;
-    transition: all 0.2s ease-in-out;
-    background-color: red;
-  }
+.subtd-padding-left{
+    padding-left: 0.3rem;
+}
