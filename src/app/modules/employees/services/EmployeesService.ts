@@ -27,7 +27,9 @@ export class EmployeesService {
       fullName: '',
       baslik:'',
       subItems:null,
-      isExpand:false
+      isExpand:false,
+      tabsize:0,
+      deep:0
     },
     {
       id: 243534,
@@ -45,7 +47,9 @@ export class EmployeesService {
       fullName: '',
       baslik:'',
       subItems:null,
-      isExpand:false
+      isExpand:false,
+      tabsize:0,
+      deep:0
     },
     {
       id: 982324,
@@ -63,7 +67,9 @@ export class EmployeesService {
       fullName: '',
       baslik:'',
       subItems:null,
-      isExpand:false
+      isExpand:false,
+      tabsize:0,
+      deep:0
     },
     {
       id: 645664,
@@ -81,7 +87,9 @@ export class EmployeesService {
       fullName: '',
       baslik:'',
       subItems:null,
-      isExpand:false
+      isExpand:false,
+      tabsize:0,
+      deep:0
     },
     {
       id: 312398,
@@ -99,7 +107,9 @@ export class EmployeesService {
       fullName: '',
       baslik:'',
       subItems:null,
-      isExpand:false
+      isExpand:false,
+      tabsize:0,
+      deep:0
     },
     {
       id: 945234,
@@ -117,7 +127,9 @@ export class EmployeesService {
       fullName: '',
       baslik:'',
       subItems:null,
-      isExpand:false
+      isExpand:false,
+      tabsize:0,
+      deep:0
     },
     {
       id: 122395,
@@ -135,7 +147,9 @@ export class EmployeesService {
       fullName: '',
       baslik:'',
       subItems:null,
-      isExpand:false
+      isExpand:false,
+      tabsize:0,
+      deep:0
     },
     {
       id: 528293,
@@ -153,7 +167,9 @@ export class EmployeesService {
       fullName: '',
       baslik:'',
       subItems:null,
-      isExpand:false
+      isExpand:false,
+      tabsize:0,
+      deep:0
     },
     {
       id: 696432,
@@ -171,7 +187,9 @@ export class EmployeesService {
       fullName: '',
       baslik:'',
       subItems:null,
-      isExpand:false
+      isExpand:false,
+      tabsize:0,
+      deep:0
     },
     {
       id: 595974,
@@ -189,7 +207,9 @@ export class EmployeesService {
       fullName: '',
       baslik:'',
       subItems:null,
-      isExpand:false
+      isExpand:false,
+      tabsize:0,
+      deep:0
     },
     {
       id: 713455,
@@ -207,7 +227,9 @@ export class EmployeesService {
       fullName: '',
       baslik:'',
       subItems:null,
-      isExpand:false
+      isExpand:false,
+      tabsize:0,
+      deep:0
     },
     {
       id: 554923,
@@ -225,7 +247,9 @@ export class EmployeesService {
       fullName: '',
       baslik:'',
       subItems:null,
-      isExpand:false
+      isExpand:false,
+      tabsize:0,
+      deep:0
     },
   ];
 

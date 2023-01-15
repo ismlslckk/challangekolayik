@@ -5,18 +5,7 @@ import { Employee } from '../../models';
 @Component({
   selector: 'itemnested',
   templateUrl: './itemnested.component.html',
-  styleUrls: ['./itemnested.component.scss'],
-  animations: [
-    trigger('changeDivSize', [
-      state('initial', style({
-        height: 125,
-      })),
-      state('final', style({
-        height: 0
-      })),
-      transition('* => initial', animate(80))
-    ]),
-  ]
+  styleUrls: ['./itemnested.component.scss']
 })
 export class ItemnestedComponent implements OnInit {
 
@@ -40,8 +29,18 @@ export class ItemnestedComponent implements OnInit {
   }
 
   expand(emp: Employee) {
-    emp.isExpand = !emp.isExpand;
-    this.rowExpandedEvent(emp);
+    if (emp.subItems) {
+      emp.isExpand = !emp.isExpand;
+      this.rowExpandedEvent(emp);
+      emp.subItems.forEach(x => {
+        if (x.tabsize === undefined)
+          x.tabsize = 0;
+        if (emp.tabsize === undefined)
+          emp.tabsize = 0;
+
+        x.tabsize = emp.tabsize + 1;
+      });
+    }
   }
 
   rowExpandedEvent(emp: Employee) {

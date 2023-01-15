@@ -7,18 +7,19 @@
    
     <ng-container *ngFor="let item of list">
         <tr (click)="expand(item)">
-            <td 
-                class="border-bottom"
-                *ngFor="let header of listHeader; let i = index">
-                <span *ngIf="i===0 && !item.subItems">&nbsp;&nbsp;&nbsp;</span>
-                <span *ngIf="i===0 && item.subItems && !item.isExpand">+</span>
-                <span *ngIf="i===0 && item.subItems && item.isExpand">-</span>
-                {{item[header.columnName]}}
-            </td>
+            <td *ngFor="let header of listHeader; let i = index"
+            class="border-bottom"
+            [ngStyle]="{'padding-left': i===0 ? item.tabsize+'rem': '0'}"
+            [ngClass]="{'expandable-td': i===0,'border-bottom': !item.isExpand}">
+            <span class="expander-icon" *ngIf="i===0 && !item.subItems"></span>
+            <span class="expander-icon" *ngIf="i===0 && item.subItems && !item.isExpand">+</span>
+            <span class="expander-icon" *ngIf="i===0 && item.subItems && item.isExpand">-</span>
+            {{item[header.columnName]}}
+        </td>
         </tr>
         <tr *ngIf="item.subItems">
-            <td class="subtd-padding-left" *ngIf="item.isExpand" [@changeDivSize]="item.isExpand ? 'initial' : 'final'" [attr.colspan]="listHeader.length" >
-               <div class="subtable-div">
+            <td class="subtable-td" *ngIf="item.isExpand" [attr.colspan]="listHeader.length" >
+               <div class="subtable-td-subtable-div">
                     <itemnested 
                     [list]="item.subItems"
                     [isWriteHeader]='false' 
