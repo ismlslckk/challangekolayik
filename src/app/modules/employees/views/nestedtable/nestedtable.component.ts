@@ -15,6 +15,10 @@ export class NestedtableComponent implements OnInit {
 
   constructor() { }
 
+  rowExpanded(emp:Employee){
+    console.log(emp);
+  }
+
   ngOnInit() {
     this.items= [];
     this.itemsHeader=[];

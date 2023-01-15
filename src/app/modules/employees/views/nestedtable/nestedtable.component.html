@@ -1,1 +1,4 @@
-<itemnested [list]="items" [listHeader]="itemsHeader" [parentTable]="true"></itemnested>
+<itemnested 
+    [list]="items"
+    [listHeader]="itemsHeader"
+    (rowExpandEvent)="rowExpanded($event)"></itemnested>

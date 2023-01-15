@@ -1,5 +1,5 @@
 <table>
-    <ng-container *ngIf="listHeader && parentTable" >
+    <ng-container *ngIf="listHeader && isWriteHeader" >
         <tr>
             <th *ngFor="let header of listHeader">{{header}}</th>
         </tr>
@@ -7,17 +7,22 @@
    
     <ng-container *ngFor="let item of list">
         <tr (click)="expand(item)">
-            <td>
+            <td class="td-content">
                 <span *ngIf="!item.subItems">&nbsp;&nbsp;</span>
                 <span *ngIf="item.subItems && !item.isExpand">+</span>
                 <span *ngIf="item.subItems && item.isExpand">-</span>
                 {{item.firstName}}
             </td>
-            <td>{{item.lastName}}</td>
+            <td class="td-content">{{item.lastName}}</td>
         </tr>
         <tr *ngIf="item.subItems">
             <td *ngIf="item.isExpand" [@changeDivSize]="item.isExpand ? 'initial' : 'final'" [attr.colspan]="listHeader.length" >
-                <itemnested [list]="item.subItems" [listHeader]="listHeader"></itemnested>
+                <itemnested 
+                [list]="item.subItems"
+                [isWriteHeader]='false' 
+                [listHeader]="listHeader"
+                (rowExpandEvent)="rowExpandedEvent($event)"
+                ></itemnested>
             </td>
         </tr>
     </ng-container>

@@ -1,6 +1,17 @@
-th,td{
-    min-width:100px
+table{
+    border-collapse: collapse;
 }
+
+th,td{
+    min-width:100px;
+    text-align: left;
+}
+
+.td-content{
+    border-bottom: solid 1px rgb(201, 195, 195);
+}
+
+
 
 .left-stuff {
     height: 50px;
