@@ -71,7 +71,33 @@ export class NestedtableComponent implements OnInit {
     emp122.phone='+905389784444';
     emp122.position='senior';
 
-    emp11.subItems=[emp111,emp122,emp111,emp122];
+    const emp122_1= new Employee();
+    emp122_1.firstName='emp1_2_1';
+    emp122_1.lastName='last1_2_1';
+    emp122_1.email="wefwj@gmail.com";
+    emp122_1.departmentName="computer engineer";
+    emp122_1.phone='+905389784444';
+    emp122_1.position='senior';
+    
+    const emp122_2= new Employee();
+    emp122_2.firstName='emp1_2_1';
+    emp122_2.lastName='last1_2_1';
+    emp122_2.email="wefwj@gmail.com";
+    emp122_2.departmentName="computer engineer";
+    emp122_2.phone='+905389784444';
+    emp122_2.position='senior';
+
+    const emp122_2_1= new Employee();
+    emp122_2_1.firstName='emp1_2_1';
+    emp122_2_1.lastName='last1_2_1';
+    emp122_2_1.email="wefwj@gmail.com";
+    emp122_2_1.departmentName="computer engineer";
+    emp122_2_1.phone='+905389784444';
+    emp122_2_1.position='senior';
+
+    emp11.subItems=[emp111,emp122,emp111];
+    emp122.subItems=[emp122_1,emp122_2,emp122_1,emp122_1];
+    emp122_2.subItems=[emp122_2_1,emp122_2_1,emp122_2_1];
 
     emp1.subItems=[emp11,emp12];
 

@@ -10,11 +10,13 @@
             <td *ngFor="let header of listHeader; let i = index;let lastItem = last;"
             class="border-bottom"
             [ngStyle]="{'padding-left': i===0 ? item.tabsize+'rem': '0'}"
-            [ngClass]="{'expandable-td': i===0,'border-bottom': !item.isExpand}">
-            <span class="expander-icon" *ngIf="i===0 && !item.subItems"></span>
-            <span class="expander-icon" *ngIf="i===0 && item.subItems && !item.isExpand">+</span>
-            <span class="expander-icon" *ngIf="i===0 && item.subItems && item.isExpand">-</span>
-            {{item[header.columnName]}}
+            [ngClass]="{'border-bottom': !item.isExpand}">
+            <div class="expander">
+                <span class="expander-icon" *ngIf="i===0 && !item.subItems"></span>
+                <span class="expander-icon" *ngIf="i===0 && item.subItems && !item.isExpand">+</span>
+                <span class="expander-icon" *ngIf="i===0 && item.subItems && item.isExpand">-</span>
+                {{item[header.columnName]}}
+            </div>
         </td>
         </tr>
         <tr *ngIf="item.subItems">

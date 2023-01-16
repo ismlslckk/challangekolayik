@@ -18,16 +18,17 @@ td {
     border-bottom: solid 0.3px rgb(201, 195, 195);
 }
 
-.expandable-td {
+.expander {
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
-}
-
-.expander-icon {
-    max-width: 1rem;
-    min-width: 1rem;
-    padding-left: 0.3rem;
-    padding-right: 0.1rem;
+    
+    &-icon {
+        max-width: 1rem;
+        min-width: 1rem;
+        padding-left: 0.3rem;
+        padding-right: 0.1rem;
+    }
 }
 
 td {
@@ -45,6 +46,8 @@ tr:last-child td {
 .subtable-td {
     &-subtable-div {
         border: solid 0.3px rgb(201, 195, 195);
+        border-right: unset;
+        border-left: unset;
         display: inline-block;
     }
 }
